@@ -2,11 +2,6 @@
 @import url("https://fonts.googleapis.com/css?family=Titillium+Web:400,700,400italic");
 @import url('https://fonts.googleapis.com/css?family=Roboto');
 
-/*
-	Strata by HTML5 UP
-	html5up.net | @ajlkn
-	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
-*/
 
 /* Reset */
 
@@ -1568,7 +1563,7 @@
 
 	body, input, select, textarea {
 		color: #a2a2a2;
-		font-family: "Titillium Web", Helvetica, sans-serif;
+		font-family: "Roboto", Helvetica, sans-serif;
 		font-size: 14pt;
 		font-weight: 400;
 		line-height: 1.75em;
@@ -1580,13 +1575,13 @@
 		-ms-transition: color 0.2s ease-in-out, border-color 0.2s ease-in-out;
 		transition: color 0.2s ease-in-out, border-color 0.2s ease-in-out;
 		border-bottom: dotted 1px;
-		color: #49bf9d;
+		color: #b7db55;
 		text-decoration: none;
 	}
 
 		a:hover {
 			border-bottom-color: transparent;
-			color: #49bf9d !important;
+			color: #b7db55 !important;
 			text-decoration: none;
 		}
 
@@ -1793,7 +1788,7 @@
 		input[type="email"]:focus,
 		select:focus,
 		textarea:focus {
-			border-color: #49bf9d;
+			border-color: #b7db55;
 		}
 
 	.select-wrapper {
@@ -1903,7 +1898,7 @@
 
 		input[type="checkbox"]:focus + label:before,
 		input[type="radio"]:focus + label:before {
-			border-color: #49bf9d;
+			border-color: #b7db55;
 		}
 
 	input[type="checkbox"] + label:before {
@@ -2351,8 +2346,8 @@
 		input[type="reset"]:hover,
 		input[type="button"]:hover,
 		.button:hover {
-			border-color: #49bf9d;
-			color: #49bf9d !important;
+			border-color: #b7db55;
+			color: #b7db55 !important;
 		}
 
 		input[type="submit"]:active,
@@ -2360,8 +2355,8 @@
 		input[type="button"]:active,
 		.button:active {
 			background-color: rgba(73, 191, 157, 0.1);
-			border-color: #49bf9d;
-			color: #49bf9d !important;
+			border-color: #b7db55;
+			color: #b7db55 !important;
 		}
 
 		input[type="submit"].icon,
@@ -2406,8 +2401,8 @@
 		input[type="reset"].special,
 		input[type="button"].special,
 		.button.special {
-			background-color: #49bf9d;
-			border-color: #49bf9d;
+			background-color: #b7db55;
+			border-color: #b7db55;
 			color: #ffffff !important;
 		}
 
