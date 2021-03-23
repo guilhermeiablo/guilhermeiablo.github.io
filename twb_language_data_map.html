@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1, shrink-to-fit=no">
+        <meta name="description" content="">
+        <meta name="author" content="Translators without Borders">
+        <link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.1/dist/leaflet.css" integrity="sha512-Rksm5RenBEKSKFjgI3a41vrjkw4EVPlJ3+OiI65vTjIdo9brlAacEuKOiQ5OFh7cOI1bkDwLqdLw3Zg0cRJAAQ==" crossorigin=""/>
+        <!-- Make sure you put this AFTER Leaflet's CSS -->
+        <script src="https://unpkg.com/leaflet@1.0.3/dist/leaflet.js"></script>
+
+        
+        <title>Language Data</title>
+        <!-- Bootstrap core CSS -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+        <!-- Custom styles for this template -->
+        <link rel="stylesheet" type="text/css" href="css/styles.css">
+    </head>
+    <!-- BODY -->
+    <body>
+        <div class="container-full h-100" style="overflow:hidden;">
+            <div class="row h-100" style="overflow: hidden;">
+                <div id="map" class="col-12 no-float"></div>
+                
+            </div>
+        </div>
+        <!-- include leaflet.js library -->
+        <script src="https://unpkg.com/leaflet@1.0.3/dist/leaflet.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        <script>
+    // Create Leaflet map object
+    function setInitialMapZoom() {
+   var viewportWidth = window.innerWidth;
+   var mapZoom;
+   if (viewportWidth < [1000]) {mapZoom = [1];}    
+   else if (viewportWidth >= [1000] && viewportWidth < [1300]) {mapZoom = [2];}    
+   else {mapZoom = [3];}
+  return mapZoom;
+  }
+
+   
+
+
+    
+    var map = L.map('map', {crs:L.CRS.EPSG3857 }).setView([30, 0], setInitialMapZoom());
+            
+    var logo = L.control({position: 'bottomright'});
+    logo.onAdd = function(map){
+        var div = L.DomUtil.create('div', 'myclass');
+        div.innerHTML= "<img src='img/small_logo.png'/>";
+        return div;
+    }
+    logo.addTo(map);
+
+
+
+
+
+ 
+
+    // Add Tile Layer basemap
+    L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/Canvas/World_Light_Gray_Base/MapServer/tile/{z}/{y}/{x}', {
+  attribution: 'Tiles &copy; Esri &mdash; Esri, DeLorme, NAVTEQ',
+  maxZoom: 17
+  }).addTo(map);
+
+
+
+
+  // load GeoJSON from an external file
+  $.getJSON("https://raw.githubusercontent.com/guilhermeiablo/guilhermeiablo.github.io/master/assets/countries_viz.geojson",function(data){
+    // add GeoJSON layer to the map once the file is loaded
+    L.geoJson(data,
+          {
+          filter: function(feature, layer) {
+            return feature.properties.show;
+          }, style:style,
+          onEachFeature: function (feature, layer) {
+            layer.bindTooltip('<p><b>' + feature.properties.name_long + '</b>');
+            layer.on('mouseover', function (e) {
+              this.openPopup();
+              });
+            layer.on('mouseout', function (e) {
+              this.closePopup();
+              });
+            layer.on('click', function (e) {
+              window.open(this.feature.properties.url,"_parent");
+              });
+            
+          }
+        }).addTo(map);
+  });
+
+
+  function style(feature) {
+    return {
+        fillColor: '#e8991c',
+        weight: 0.5,
+        opacity: 1,
+        color: 'gray',
+        dashArray: '0',
+        fillOpacity: 1
+    };
+}
+
+
+
+    
+    </script>
+    </body>

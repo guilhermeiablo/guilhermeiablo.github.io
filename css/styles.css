@@ -1,0 +1,132 @@
+.cc-selector input {
+    margin: 0;
+    padding: 0;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+}
+
+.ucpi {
+    background-image: url(../img/pictos-17.png);
+}
+
+.ucus {
+    background-image: url(../img/pictos-18.png);
+}
+
+.rebio {
+    background-image: url(../img/pictos-01.png);
+}
+
+.esec {
+    background-image: url(../img/pictos-02.png);
+}
+
+.parques {
+    background-image: url(../img/pictos-03.png);
+}
+
+.monumento {
+    background-image: url(../img/pictos-04.png);
+}
+
+.revis {
+    background-image: url(../img/pictos-05.png);
+}
+
+.apa {
+    background-image: url(../img/pictos-06.png);
+}
+
+.arie {
+    background-image: url(../img/pictos-07.png);
+}
+
+.flona {
+    background-image: url(../img/pictos-08.png);
+}
+
+.resex {
+    background-image: url(../img/pictos-09.png);
+}
+
+.refauna {
+    background-image: url(../img/pictos-10.png);
+}
+
+.redes {
+    background-image: url(../img/pictos-11.png);
+}
+
+.rppn {
+    background-image: url(../img/pictos-12.png);
+}
+
+.quilombo {
+    background-image: url(../img/pictos-13.png);
+}
+
+.amortecimento {
+    background-image: url(../img/pictos-14.png);
+}
+
+.biosfera {
+    background-image: url(../img/pictos-15.png);
+}
+
+.indigena {
+    background-image: url(../img/pictos-16.png);
+}
+
+.cc-selector input:active +.drinkcard-cc {
+    opacity: .9;
+}
+
+.cc-selector input:checked +.drinkcard-cc {
+    -webkit-filter: none;
+    -moz-filter: none;
+    filter: none;
+}
+
+.drinkcard-cc {
+    cursor: pointer;
+    background-size: contain;
+    background-repeat: no-repeat;
+    display: inline-block;
+    margin-left: 5px;
+    width: 75px;
+    height: 75px;
+    -webkit-transition: all 100ms ease-in;
+    -moz-transition: all 100ms ease-in;
+    transition: all 100ms ease-in;
+    -webkit-filter: brightness(1) grayscale(.5) opacity(.5);
+    -moz-filter: brightness(1) grayscale(.5) opacity(.5);
+    filter: brightness(1) grayscale(.5) opacity(.5);
+}
+
+.drinkcard-cc:hover {
+    -webkit-filter: brightness(1) grayscale(.1) opacity(.9);
+    -moz-filter: brightness(1) grayscale(.1) opacity(.9);
+    filter: brightness(1) grayscale(.1) opacity(.9);
+}
+
+/* Extras */
+a:visited {
+    color: #888;
+}
+
+a {
+    color: #444;
+    text-decoration: none;
+}
+
+p {
+    margin-bottom: .3em;
+}
+
+html,
+body,
+.container {
+    height: 100%;
+    min-height: 100%;
+}
