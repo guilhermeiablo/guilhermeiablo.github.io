@@ -32,9 +32,9 @@
     function setInitialMapZoom() {
    var viewportWidth = window.innerWidth;
    var mapZoom;
-   if (viewportWidth < [1000]) {mapZoom = [1];}    
-   else if (viewportWidth >= [1000] && viewportWidth < [1300]) {mapZoom = [2];}    
-   else {mapZoom = [3];}
+   if (viewportWidth < [1000]) {mapZoom = [2];}    
+   else if (viewportWidth >= [1000] && viewportWidth < [1300]) {mapZoom = [3];}    
+   else {mapZoom = [4];}
   return mapZoom;
   }
 
@@ -42,7 +42,7 @@
 
 
     
-    var map = L.map('map', {crs:L.CRS.EPSG3857 }).setView([30, 0], setInitialMapZoom());
+    var map = L.map('map', {crs:L.CRS.EPSG3857 }).setView([11.752939, 17.814464], setInitialMapZoom());
             
     var logo = L.control({position: 'bottomright'});
     logo.onAdd = function(map){
