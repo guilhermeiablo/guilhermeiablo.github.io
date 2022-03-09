@@ -2478,9 +2478,9 @@
 		background-color: #1f1815;
 		background-attachment: scroll,								fixed;
 		background-image: url("images/overlay.png"), url("../../images/bg.jpg");
-		background-position: top left,							top left;
+		background-position: bottom left,							bottom left;
 		background-repeat: repeat,								no-repeat;
-		background-size: auto,								auto 100%;
+		background-size: 40%,								40% auto;
 		color: rgba(255, 255, 255, 0.5);
 		height: 100%;
 		left: 0;
@@ -2921,9 +2921,10 @@
 		/* Header */
 
 			#header {
+				display:none;
 				background-attachment: scroll;
 				background-position: top left, center center;
-				background-size: auto,		cover;
+				background-size: auto;
 				left: auto;
 				padding: 6em 4em;
 				position: relative;
